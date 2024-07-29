@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-07-29T19:55:58 WIB" name="Default suite" finished-at="2024-07-29T19:56:01 WIB" duration-ms="2940">
+  <suite started-at="2024-07-29T19:58:48 WIB" name="Default suite" finished-at="2024-07-29T19:58:51 WIB" duration-ms="3727">
     <groups>
     </groups>
-    <test started-at="2024-07-29T19:55:58 WIB" name="Default test" finished-at="2024-07-29T19:56:01 WIB" duration-ms="2940">
+    <test started-at="2024-07-29T19:58:48 WIB" name="Default test" finished-at="2024-07-29T19:58:51 WIB" duration-ms="3727">
       <class name="com.tests.TestExample">
-        <test-method signature="successCreatePost()[pri:0, instance:com.tests.TestExample@368247b9]" started-at="2024-07-29T19:55:58 WIB" name="successCreatePost" finished-at="2024-07-29T19:56:01 WIB" duration-ms="2481" status="PASS">
+        <test-method signature="successCreatePost()[pri:0, instance:com.tests.TestExample@368247b9]" started-at="2024-07-29T19:58:48 WIB" name="successCreatePost" finished-at="2024-07-29T19:58:50 WIB" duration-ms="2459" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- successCreatePost -->
-        <test-method signature="successGetPost()[pri:0, instance:com.tests.TestExample@368247b9]" started-at="2024-07-29T19:56:01 WIB" name="successGetPost" finished-at="2024-07-29T19:56:01 WIB" duration-ms="437" status="PASS">
+        <test-method signature="successGetPost()[pri:0, instance:com.tests.TestExample@368247b9]" started-at="2024-07-29T19:58:50 WIB" name="successGetPost" finished-at="2024-07-29T19:58:51 WIB" duration-ms="1246" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- successGetPost -->
