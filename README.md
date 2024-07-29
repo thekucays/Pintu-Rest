@@ -1,5 +1,5 @@
 # API Tests
-Luki Ramadon - https://github.com/thekucays/flptst-api
+Luki Ramadon
 
 ## IDE / Plugins Used
 - Eclipse 4.32.0
@@ -13,7 +13,7 @@ Luki Ramadon - https://github.com/thekucays/flptst-api
 ## Things Validated for Each Test Case
 - HTTP Status: should be 200 (get) and 201 (created, when create new post)
 - JSON Schema on response
-- Schema file stored on classpath: `target/classes/createPostSchema.json` and `target/classes/getPostSchema.json`
+- Schema file stored on `schemas` folder on root project
 
 ## Running The Project 
 - Open this project folder on Eclipse 
