@@ -7,18 +7,19 @@ import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.response.Response;
 
 public class Common {
+	
+	private static final String urlJsonPlaceHolder = "https://jsonplaceholder.typicode.com/posts";
+	
 	public static void getPost() {
-		final String getPostURL = "https://jsonplaceholder.typicode.com/posts";
 		final File schemaFile = new File("schemas/getPostSchema.json");
 		
 		// get new post and assert result
-		given().get(getPostURL)
+		given().get(urlJsonPlaceHolder)
 			.then().statusCode(200)
 			.and().assertThat().body(JsonSchemaValidator.matchesJsonSchema(schemaFile));
 	}
 	
 	public static void createPost(String title, String body, int userId) {
-        final String createPostURL = "https://jsonplaceholder.typicode.com/posts";
         final File schemaFile = new File("schemas/createPostSchema.json");
         
         // Define the post body
@@ -29,7 +30,7 @@ public class Common {
             .header("Content-Type", "application/json")
             .body(postBody)
             .when()
-            .post(createPostURL)
+            .post(urlJsonPlaceHolder)
             .then()
             .statusCode(201)  // 201 Created is the expected status code for successful POST requests
             .and()
@@ -44,17 +45,16 @@ public class Common {
 	
 	public static boolean invalidRequestMethod(String method, int expectedHttpStatus) {
 		boolean isMethodAvailable = true;
-		final String endpointURL = "https://jsonplaceholder.typicode.com/posts";
 		
 		switch(method.toLowerCase()) {
 			case "put":
-				given().put(endpointURL).then().statusCode(expectedHttpStatus);
+				given().put(urlJsonPlaceHolder).then().statusCode(expectedHttpStatus);
 				break;
 			case "patch":
-				given().patch(endpointURL).then().statusCode(expectedHttpStatus);
+				given().patch(urlJsonPlaceHolder).then().statusCode(expectedHttpStatus);
 				break;
 			case "delete":
-				given().delete(endpointURL).then().statusCode(expectedHttpStatus);
+				given().delete(urlJsonPlaceHolder).then().statusCode(expectedHttpStatus);
 				break;
 			default:
 				isMethodAvailable = false;
