@@ -9,7 +9,9 @@ import io.restassured.response.Response;
 public class Common {
 	
 	private static final String urlJsonPlaceHolder = "https://jsonplaceholder.typicode.com/posts";
+	private static final String urlReqRes = "https://reqres.in/api/users/";
 	
+	// jsonplaceholder //////////////////////////////////////////////////////////////
 	public static void getPost() {
 		final File schemaFile = new File("schemas/getPostSchema.json");
 		
@@ -62,4 +64,21 @@ public class Common {
 		
 		return isMethodAvailable;
 	}
+	
+	// end of jsonplaceholder //////////////////////////////////////////////////////////////
+
+	
+	// reqres.in //////////////////////////////////////////////////////////////////////////
+	public static void getUserReqRes(int userId, int expectedHttpStatus, boolean expectedFound) {
+		final String getUserURL = urlReqRes + String.valueOf(userId);
+		final File schemaFile = new File("schemas/reqresSchema.json");
+		
+		Response getResponse = given().get(getUserURL);
+		getResponse.then().statusCode(expectedHttpStatus);
+		
+		if(expectedFound) {
+			getResponse.then().assertThat().body(JsonSchemaValidator.matchesJsonSchema(schemaFile));
+		}
+	}
+	// end of reqres.in //////////////////////////////////////////////////////////////////////////
 }

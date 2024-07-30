@@ -1,32 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-07-30T23:41:24 WIB" name="Default suite" finished-at="2024-07-30T23:41:28 WIB" duration-ms="4640">
+  <suite started-at="2024-07-31T00:05:16 WIB" name="Default suite" finished-at="2024-07-31T00:05:17 WIB" duration-ms="1095">
     <groups>
     </groups>
-    <test started-at="2024-07-30T23:41:24 WIB" name="Default test" finished-at="2024-07-30T23:41:28 WIB" duration-ms="4640">
+    <test started-at="2024-07-31T00:05:16 WIB" name="Default test" finished-at="2024-07-31T00:05:17 WIB" duration-ms="1095">
       <class name="com.tests.TestExample">
-        <test-method signature="invalidRequestMethodDelete()[pri:0, instance:com.tests.TestExample@55a147cc]" started-at="2024-07-30T23:41:24 WIB" name="invalidRequestMethodDelete" finished-at="2024-07-30T23:41:25 WIB" duration-ms="1334" status="PASS">
+        <test-method signature="getUserNotFound()[pri:0, instance:com.tests.TestExample@d86a6f]" started-at="2024-07-31T00:05:16 WIB" name="getUserNotFound" finished-at="2024-07-31T00:05:17 WIB" duration-ms="1075" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- invalidRequestMethodDelete -->
-        <test-method signature="invalidRequestMethodPatch()[pri:0, instance:com.tests.TestExample@55a147cc]" started-at="2024-07-30T23:41:25 WIB" name="invalidRequestMethodPatch" finished-at="2024-07-30T23:41:26 WIB" duration-ms="1018" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- invalidRequestMethodPatch -->
-        <test-method signature="invalidRequestMethodPut()[pri:0, instance:com.tests.TestExample@55a147cc]" started-at="2024-07-30T23:41:26 WIB" name="invalidRequestMethodPut" finished-at="2024-07-30T23:41:27 WIB" duration-ms="999" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- invalidRequestMethodPut -->
-        <test-method signature="successCreatePost()[pri:0, instance:com.tests.TestExample@55a147cc]" started-at="2024-07-30T23:41:27 WIB" name="successCreatePost" finished-at="2024-07-30T23:41:28 WIB" duration-ms="999" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- successCreatePost -->
-        <test-method signature="successGetPost()[pri:0, instance:com.tests.TestExample@55a147cc]" started-at="2024-07-30T23:41:28 WIB" name="successGetPost" finished-at="2024-07-30T23:41:28 WIB" duration-ms="263" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- successGetPost -->
+        </test-method> <!-- getUserNotFound -->
       </class> <!-- com.tests.TestExample -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
