@@ -4,6 +4,7 @@ import java.io.File;
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
 import io.restassured.module.jsv.JsonSchemaValidator;
+import io.restassured.response.Response;
 
 public class Common {
 	public static void getPost() {
@@ -14,7 +15,6 @@ public class Common {
 		given().get(getPostURL)
 			.then().statusCode(200)
 			.and().assertThat().body(JsonSchemaValidator.matchesJsonSchema(schemaFile));
-		
 	}
 	
 	public static void createPost(String title, String body, int userId) {
@@ -41,4 +41,25 @@ public class Common {
             .and()
             .assertThat().body("userId", equalTo(userId));
     }
+	
+	public static boolean invalidRequestMethod(String method, int expectedHttpStatus) {
+		boolean isMethodAvailable = true;
+		final String endpointURL = "https://jsonplaceholder.typicode.com/posts";
+		
+		switch(method.toLowerCase()) {
+			case "put":
+				given().put(endpointURL).then().statusCode(expectedHttpStatus);
+				break;
+			case "patch":
+				given().patch(endpointURL).then().statusCode(expectedHttpStatus);
+				break;
+			case "delete":
+				given().delete(endpointURL).then().statusCode(expectedHttpStatus);
+				break;
+			default:
+				isMethodAvailable = false;
+		}
+		
+		return isMethodAvailable;
+	}
 }

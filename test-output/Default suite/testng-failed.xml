@@ -5,7 +5,7 @@
     <classes>
       <class name="com.tests.TestExample">
         <methods>
-          <include name="successGetPost"/>
+          <include name="invalidRequestMethodPut"/>
         </methods>
       </class> <!-- com.tests.TestExample -->
     </classes>
